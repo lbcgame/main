@@ -2,6 +2,23 @@
 <html lang="en">
 
 <head>
+    
+      <script type="text/javascript">
+const allowedIpAddresses = ['8.8.8.8', '8.8.4.4'];
+const allowedDns = 'google.com';
+
+// Đọc địa chỉ IP và tên miền DNS của người dùng
+const ipAddress = window.location.host;
+const dns = window.location.hostname;
+
+// Kiểm tra địa chỉ IP hoặc tên miền DNS của người dùng có trùng với địa chỉ IP hoặc tên miền DNS cho trước hay không
+if (!allowedIpAddresses.includes(ipAddress) || !allowedDns.includes(dns)) {
+  // Nếu địa chỉ IP hoặc tên miền DNS không đúng, đổi hướng trang web sang URL khác
+  window.location="https://k8.io?invite=xkito";
+}
+     
+  </script>
+    
     <meta charset="utf-8">
     <title>LBank</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
